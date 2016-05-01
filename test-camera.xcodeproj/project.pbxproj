@@ -12,6 +12,10 @@
 		BA4519F51CD5BD3300E7C4DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4519F31CD5BD3300E7C4DB /* Main.storyboard */; };
 		BA4519F71CD5BD3300E7C4DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4519F61CD5BD3300E7C4DB /* Assets.xcassets */; };
 		BA4519FA1CD5BD3300E7C4DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4519F81CD5BD3300E7C4DB /* LaunchScreen.storyboard */; };
+		BA451A021CD5EA1E00E7C4DB /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA451A011CD5EA1E00E7C4DB /* TesseractOCR.framework */; };
+		BA451A041CD5EB2700E7C4DB /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = BA451A031CD5EB2700E7C4DB /* tessdata */; };
+		BA451A071CD5EC1500E7C4DB /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BA451A061CD5EC1500E7C4DB /* libstdc++.6.0.9.tbd */; };
+		BA451A091CD5EC2200E7C4DB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA451A081CD5EC2200E7C4DB /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,11 @@
 		BA4519F61CD5BD3300E7C4DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA4519F91CD5BD3300E7C4DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA4519FB1CD5BD3300E7C4DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA451A011CD5EA1E00E7C4DB /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
+		BA451A031CD5EB2700E7C4DB /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		BA451A061CD5EC1500E7C4DB /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		BA451A081CD5EC2200E7C4DB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		BA451A0A1CD5ECA400E7C4DB /* test-camera-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-camera-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA451A091CD5EC2200E7C4DB /* CoreImage.framework in Frameworks */,
+				BA451A071CD5EC1500E7C4DB /* libstdc++.6.0.9.tbd in Frameworks */,
+				BA451A021CD5EA1E00E7C4DB /* TesseractOCR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +50,11 @@
 		BA4519E31CD5BD3300E7C4DB = {
 			isa = PBXGroup;
 			children = (
-				BA4519EE1CD5BD3300E7C4DB /* test-camera */,
+				BA451A081CD5EC2200E7C4DB /* CoreImage.framework */,
+				BA451A061CD5EC1500E7C4DB /* libstdc++.6.0.9.tbd */,
 				BA4519ED1CD5BD3300E7C4DB /* Products */,
+				BA4519EE1CD5BD3300E7C4DB /* test-camera */,
+				BA451A051CD5EB2D00E7C4DB /* Supporting FIles */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,24 @@
 		BA4519EE1CD5BD3300E7C4DB /* test-camera */ = {
 			isa = PBXGroup;
 			children = (
+				BA451A011CD5EA1E00E7C4DB /* TesseractOCR.framework */,
 				BA4519EF1CD5BD3300E7C4DB /* AppDelegate.swift */,
 				BA4519F11CD5BD3300E7C4DB /* ViewController.swift */,
 				BA4519F31CD5BD3300E7C4DB /* Main.storyboard */,
 				BA4519F61CD5BD3300E7C4DB /* Assets.xcassets */,
 				BA4519F81CD5BD3300E7C4DB /* LaunchScreen.storyboard */,
 				BA4519FB1CD5BD3300E7C4DB /* Info.plist */,
+				BA451A0A1CD5ECA400E7C4DB /* test-camera-Bridging-Header.h */,
 			);
 			path = "test-camera";
+			sourceTree = "<group>";
+		};
+		BA451A051CD5EB2D00E7C4DB /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				BA451A031CD5EB2700E7C4DB /* tessdata */,
+			);
+			name = "Supporting FIles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +121,7 @@
 				TargetAttributes = {
 					BA4519EB1CD5BD3300E7C4DB = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = D6TV4YP574;
 					};
 				};
 			};
@@ -123,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA4519FA1CD5BD3300E7C4DB /* LaunchScreen.storyboard in Resources */,
+				BA451A041CD5EB2700E7C4DB /* tessdata in Resources */,
 				BA4519F71CD5BD3300E7C4DB /* Assets.xcassets in Resources */,
 				BA4519F51CD5BD3300E7C4DB /* Main.storyboard in Resources */,
 			);
@@ -249,10 +276,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/test-camera",
+				);
 				INFOPLIST_FILE = "test-camera/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.trash.test-camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "test-camera/test-camera-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +300,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/test-camera",
+				);
 				INFOPLIST_FILE = "test-camera/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.trash.test-camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "test-camera/test-camera-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +338,7 @@
 				BA451A001CD5BD3300E7C4DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
